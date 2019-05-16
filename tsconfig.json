@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "scroll-effect": [
+        "dist/scroll-effect"
+      ],
+      "scroll-effect/*": [
+        "dist/scroll-effect/*"
+      ],
+      "overlay-menu-effect": [
+        "dist/overlay-menu-effect"
+      ],
+      "overlay-menu-effect/*": [
+        "dist/overlay-menu-effect/*"
+      ]
+    }
   }
 }

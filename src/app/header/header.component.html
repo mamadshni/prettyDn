@@ -1,0 +1,36 @@
+<header>
+
+  <div id="header--container">
+
+
+    <!-- BURGER Menu -->
+    <div class="header--burger" (click)="openMenu()">
+
+      <div class="header--burger__circle"></div>
+
+      <div class="header--burger__wrapper" [ngClass]="{'open': isMenuOpened}">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</header>
+
+<overlay-menu-effect [isOpen]="isMenuOpened">
+  <ng-template overlayMenu>
+
+    <span listItems>Home</span>
+    <span listItems>About</span>
+    <span listItems>Map</span>
+    <span listItems>Main</span>
+
+  </ng-template>
+</overlay-menu-effect>

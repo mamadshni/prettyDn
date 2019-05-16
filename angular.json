@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "architect": {
@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -128,6 +128,76 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "scroll-effect": {
+      "root": "projects/scroll-effect",
+      "sourceRoot": "projects/scroll-effect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/scroll-effect/tsconfig.lib.json",
+            "project": "projects/scroll-effect/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/scroll-effect/src/test.ts",
+            "tsConfig": "projects/scroll-effect/tsconfig.spec.json",
+            "karmaConfig": "projects/scroll-effect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/scroll-effect/tsconfig.lib.json",
+              "projects/scroll-effect/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "overlay-menu-effect": {
+      "root": "projects/overlay-menu-effect",
+      "sourceRoot": "projects/overlay-menu-effect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/overlay-menu-effect/tsconfig.lib.json",
+            "project": "projects/overlay-menu-effect/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/overlay-menu-effect/src/test.ts",
+            "tsConfig": "projects/overlay-menu-effect/tsconfig.spec.json",
+            "karmaConfig": "projects/overlay-menu-effect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/overlay-menu-effect/tsconfig.lib.json",
+              "projects/overlay-menu-effect/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
