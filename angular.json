@@ -204,6 +204,76 @@
           }
         }
       }
+    },
+    "mouse-effect": {
+      "root": "projects/mouse-effect",
+      "sourceRoot": "projects/mouse-effect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mouse-effect/tsconfig.lib.json",
+            "project": "projects/mouse-effect/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mouse-effect/src/test.ts",
+            "tsConfig": "projects/mouse-effect/tsconfig.spec.json",
+            "karmaConfig": "projects/mouse-effect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mouse-effect/tsconfig.lib.json",
+              "projects/mouse-effect/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "fade-scroll-effect": {
+      "root": "projects/fade-scroll-effect",
+      "sourceRoot": "projects/fade-scroll-effect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fade-scroll-effect/tsconfig.lib.json",
+            "project": "projects/fade-scroll-effect/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fade-scroll-effect/src/test.ts",
+            "tsConfig": "projects/fade-scroll-effect/tsconfig.spec.json",
+            "karmaConfig": "projects/fade-scroll-effect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fade-scroll-effect/tsconfig.lib.json",
+              "projects/fade-scroll-effect/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-scroll-animation"

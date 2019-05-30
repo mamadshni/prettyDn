@@ -8,7 +8,7 @@ import {
 
 export function fadeInOutAnim(duration = '200ms') {
   return trigger('fadeInOut', [
-    transition(':enter', [
+    transition('void => true', [
       style({ opacity: 0 }),
       animate(`${duration} ease`, style({ opacity: 1 }))
     ]),

@@ -1,11 +1,19 @@
-<div #titleElem class="scroll-effect__title" [style.opacity]="showTemplates ? '1':'0' ">
+<div
+  #titleElem
+  class="scroll-effect__title"
+  [style.opacity]="showTemplates ? '1' : '0'"
+>
   <ng-container *ngTemplateOutlet="titleDirective.tmpRef"></ng-container>
 </div>
 
-<div #backdropElem [@fadeInOut] *ngIf="showTemplates" class="scroll-effect__backdrop">
+<div
+  #backdropElem
+  [@fadeInOut]="isChild"
+  *ngIf="showTemplates"
+  class="scroll-effect__backdrop"
+>
   <ng-container *ngTemplateOutlet="backDropDirective.tmpRef"></ng-container>
 </div>
-
 
 <div [@opacity]="showTemplates">
   <ng-content></ng-content>

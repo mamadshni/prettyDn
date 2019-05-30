@@ -1,0 +1,33 @@
+<div class="item-card">
+
+  <div class="item-card__wrapper" MouseRotateEffect (click)="toHeroSection()" #categoryWrapper>
+    <div class="item-card__perspective">
+
+      <div class="item-card__img-split" #imageSplit>
+
+        <div class="item-card__image" [style.backgroundImage]="'url(' + category.imageUrl + ')'" #imageCard></div>
+
+        <div class="item-card__image-mirror" [style.backgroundImage]="'url(' + category.imageUrl + ')'"
+          #imageCardMirror></div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="item-card__shadow">
+
+    <img [src]="category.imageUrl" alt="shadow">
+
+  </div>
+
+  <div class="item-card__caption-wrapper" #captionWrapper>
+    <div class="item-card__caption-text" #captionText>
+
+      <h2>{{category.title}}</h2>
+      <p>{{category.description}}</p>
+
+    </div>
+  </div>
+
+</div>

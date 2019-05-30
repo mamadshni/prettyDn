@@ -2,6 +2,12 @@ $span-color: #ecf0f1;
 $span-transition: 0.35s ease-in-out;
 $circle-color : #010101;
 
+$backColorLight : rgb(238, 238, 238);
+$backColorDark : rgb(17, 17, 17);
+
+$textColorLight :invert($backColorLight);
+$textColorDark :invert($backColorDark);
+
 // HEADER SECTION
 
 header {
@@ -63,13 +69,13 @@ header {
   justify-content: center;
   align-items: center;
 
+
   //header--burger__circle
   &__circle {
     width: 40px;
     height: 40px;
     border-radius: 100%;
     box-sizing: border-box;
-    background-color: $circle-color;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -91,7 +97,6 @@ header {
     pointer-events: none;
 
     span {
-      background-color: $span-color;
       width: 100%;
       height: 1px;
       border-radius: 3px;
@@ -150,6 +155,51 @@ header {
   }
 }
 
+
+// Logo Section
+
+.logo {
+
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+//Responsible for Color 
+
+.dark {
+  .header--burger {
+    &__circle {
+
+      background-color: $backColorLight;
+    }
+
+    &__wrapper {
+
+      span {
+        background-color: $textColorLight;
+      }
+    }
+  }
+}
+
+.light {
+  .header--burger {
+    &__circle {
+
+      background-color: $backColorDark;
+    }
+
+    &__wrapper {
+
+      span {
+        background-color: $textColorDark;
+      }
+    }
+  }
+}
+
 // Responsibility
 
 @media only screen and (max-width: 1466px) {
@@ -172,11 +222,19 @@ header {
     right: 20px;
   }
 
+  .logo {
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .header--burger {
     right: 10px;
+  }
+
+  .logo {
+    margin-left: 40px;
   }
 }
 
@@ -188,6 +246,10 @@ header {
 
   header {
     height: 80px;
+  }
+
+  .logo {
+    margin-left: 30px;
   }
 
 }

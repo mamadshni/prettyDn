@@ -4,7 +4,7 @@
 
 
     <!-- BURGER Menu -->
-    <div class="header--burger" (click)="openMenu()">
+    <div class="header--burger" [class.light]="isLight" [class.dark]="!isLight" (click)="changeMenuState()">
 
       <div class="header--burger__circle"></div>
 
@@ -20,6 +20,13 @@
 
     </div>
 
+    <!-- Logo -->
+    <div class="logo">
+      <a [routerLink]="['/']" (click)="closeMenu()">
+        <div class="header--burger__circle"></div>
+      </a>
+    </div>
+
   </div>
 
 </header>
@@ -27,10 +34,10 @@
 <overlay-menu-effect [isOpen]="isMenuOpened">
   <ng-template overlayMenu>
 
-    <span listItems>Home</span>
-    <span listItems>About</span>
-    <span listItems>Map</span>
-    <span listItems>Main</span>
+    <span listItems (click)="closeMenu()"> <a [routerLink]="'/main'"> Home </a> </span>
+    <span listItems (click)="closeMenu()"> <a [routerLink]="'/about'"> About </a> </span>
+    <span listItems (click)="closeMenu()">Map</span>
+    <span listItems (click)="closeMenu()">Main</span>
 
   </ng-template>
 </overlay-menu-effect>

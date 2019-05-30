@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { CategoryInterface } from './../../data/category-data/category-data.interface';
+import { CategoryDataService } from './../../data/category-data/category-data.service';
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {
+  backDrop: CategoryInterface = {
+    imageUrl: '../assets/bg.jpg',
+    title: 'About',
+    description: 'Lorem ipsum dolor sit.'
+  };
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private categoryDataService: CategoryDataService
+  ) {}
 
   ngOnInit() {
-  }
+    const categoryIndex: number = +this.route.snapshot.params.id;
 
+    if (this.route.snapshot.routeConfig.path === 'about') {
+    } else {
+      this.backDrop = this.categoryDataService.getCategory(categoryIndex);
+    }
+  }
 }

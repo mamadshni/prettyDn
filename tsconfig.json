@@ -30,6 +30,18 @@
       ],
       "overlay-menu-effect/*": [
         "dist/overlay-menu-effect/*"
+      ],
+      "mouse-effect": [
+        "dist/mouse-effect"
+      ],
+      "mouse-effect/*": [
+        "dist/mouse-effect/*"
+      ],
+      "fade-scroll-effect": [
+        "dist/fade-scroll-effect"
+      ],
+      "fade-scroll-effect/*": [
+        "dist/fade-scroll-effect/*"
       ]
     }
   }

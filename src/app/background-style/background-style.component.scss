@@ -1,0 +1,43 @@
+$backColorLight : rgb(238, 238, 238);
+$backColorDark : rgb(17, 17, 17);
+
+$textColorLight :invert($backColorLight);
+$textColorDark :invert($backColorDark);
+
+
+.background {
+
+  &__line {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    line {
+      stroke-width: 1;
+    }
+
+    &.dark {
+      background-color: $backColorDark;
+
+      line {
+        opacity: 0.03;
+        stroke: $textColorDark;
+      }
+    }
+
+    &.light {
+      background-color: $backColorLight;
+
+      line {
+        opacity: 0.06;
+        stroke: $textColorLight;
+      }
+    }
+  }
+
+
+}

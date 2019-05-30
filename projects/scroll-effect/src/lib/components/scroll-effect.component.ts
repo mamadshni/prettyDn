@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -8,7 +9,7 @@ import {
   OnInit,
   ViewChild,
   ViewEncapsulation,
-  AfterViewInit
+  OnDestroy
 } from '@angular/core';
 import { ScrollBackdropDirective } from '../directives/scroll-backdrop.directive';
 import { ScrollTitleDirective } from '../directives/scroll-title.directive';
@@ -32,8 +33,10 @@ const MIN_TITLE_Y_POSITION = 50;
     class: 'scroll-effect__container'
   }
 })
-export class ScrollEffectComponent implements OnInit, AfterViewInit {
+export class ScrollEffectComponent implements OnInit, OnDestroy {
   public showTemplates = true;
+  public isChild = false;
+  private bindScrollEvent = this.onScroll.bind(this);
 
   @ContentChild(ScrollTitleDirective) titleDirective: ScrollTitleDirective;
   @ContentChild(ScrollBackdropDirective)
@@ -42,16 +45,27 @@ export class ScrollEffectComponent implements OnInit, AfterViewInit {
   @ViewChild('titleElem') titleElem: ElementRef<HTMLDivElement>;
   @ViewChild('backdropElem') backdropElem: ElementRef<HTMLDivElement>;
 
-  constructor(private zone: NgZone, private cd: ChangeDetectorRef) {}
+  constructor(
+    private zone: NgZone,
+    private cd: ChangeDetectorRef,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.zone.runOutsideAngular(this.initScrollListener.bind(this));
+    this.isChild = this.route.snapshot.data.isChild;
   }
 
-  ngAfterViewInit() {}
+  ngOnDestroy() {
+    this.zone.runOutsideAngular(this.deleteScrollListener.bind(this));
+  }
 
   private initScrollListener() {
-    window.addEventListener('scroll', this.onScroll.bind(this));
+    window.addEventListener('scroll', this.bindScrollEvent);
+  }
+
+  private deleteScrollListener() {
+    window.removeEventListener('scroll', this.bindScrollEvent);
   }
 
   private onScroll(e: Event) {
@@ -60,12 +74,11 @@ export class ScrollEffectComponent implements OnInit, AfterViewInit {
     // OUT OF BOUND -> HIDE ALL
     if (scrollY > SCROLL_BOUND) {
       this.showTemplates = false;
-      this.cd.detectChanges();
 
       // IN BOUND -> ANIMATE TITLE
     } else {
       this.showTemplates = true;
-      this.cd.detectChanges();
+      this.isChild = true;
 
       if (this.titleElem) {
         const factor =
@@ -78,5 +91,6 @@ export class ScrollEffectComponent implements OnInit, AfterViewInit {
         this.titleElem.nativeElement.style.opacity = newOpacity.toString();
       }
     }
+    this.cd.detectChanges();
   }
 }

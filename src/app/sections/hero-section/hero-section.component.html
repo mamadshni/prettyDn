@@ -5,8 +5,8 @@
     <overlay-text-effect>
 
       <div class="hero-title">
-        <h1>Title</h1>
-        <h3>Sub Title</h3>
+        <h1>{{backDrop.title}}</h1>
+        <p>{{backDrop.description}}</p>
       </div>
 
     </overlay-text-effect>
@@ -14,7 +14,17 @@
   </ng-template>
 
   <ng-template scrollBackdrop>
-    <img class="backdrop-image" src="../assets/bg.jpg" alt="">
+
+    <mouse-move-effect class="backdrop-wrapper">
+
+      <ng-template imageMouseEffect>
+
+        <img class="backdrop-image" [src]="backDrop.imageUrl" alt="">
+
+      </ng-template>
+
+    </mouse-move-effect>
+
   </ng-template>
 
 
