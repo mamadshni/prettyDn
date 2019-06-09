@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FadeScrollEffectComponent } from './fade-scroll-effect.component';
+import { GalleryCardComponent } from './gallery-card.component';
 
-describe('FadeScrollEffectComponent', () => {
-  let component: FadeScrollEffectComponent;
-  let fixture: ComponentFixture<FadeScrollEffectComponent>;
+describe('GalleryCardComponent', () => {
+  let component: GalleryCardComponent;
+  let fixture: ComponentFixture<GalleryCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FadeScrollEffectComponent ]
+      declarations: [ GalleryCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FadeScrollEffectComponent);
+    fixture = TestBed.createComponent(GalleryCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,114 @@
+@mixin fullWidth($width : 0) {
+  width: calc(100% - #{$width}px);
+}
+
+@mixin galleryItem($parentW, $column, $height, $margin) {
+  $width: 100% / $column;
+
+  width: calc(#{$width} - #{$margin * 2}px);
+  height: calc((100vw - #{$parentW}px) / #{$column} * #{$height});
+  margin: #{$margin}px;
+}
+
+
+.fade-scroll {
+
+  // fade-scroll__wrapper
+  &__wrapper {
+    margin: 0 auto;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    @include fullWidth(500);
+  }
+
+  // fade-scroll__row
+  &__row {}
+
+  // fade-scroll__item
+  &__item {
+    display: block;
+    @include galleryItem(500, 3, 1.18, 50);
+
+    &:nth-child(3n+2) {
+      margin-top: 100px;
+    }
+  }
+}
+
+
+//Responsive
+
+
+
+@media only screen and (max-width: 1466px) {
+  .fade-scroll {
+
+    &__wrapper {
+      @include fullWidth(240);
+    }
+
+    &__item {
+      @include galleryItem(240, 3, 1.18, 30)
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .fade-scroll {
+
+    &__wrapper {
+      @include fullWidth(200);
+    }
+
+    &__item {
+      @include galleryItem(200, 2, 1.08, 40);
+
+      &:nth-child(3n+2) {
+        margin-top: 40px;
+      }
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .fade-scroll {
+
+    &__wrapper {
+      @include fullWidth(20);
+    }
+
+    &__item {
+      @include galleryItem(20, 2, 1.08, 30);
+
+      &:nth-child(3n+2) {
+        margin-top: 30px;
+      }
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 479px) {
+  .fade-scroll {
+
+    &__wrapper {
+      @include fullWidth(60);
+    }
+
+    &__item {
+      @include galleryItem(60, 1, 1.35, 0);
+      margin-bottom: 60px;
+
+      &:nth-child(3n+2) {
+        margin-top: 0px;
+      }
+    }
+
+  }
+}

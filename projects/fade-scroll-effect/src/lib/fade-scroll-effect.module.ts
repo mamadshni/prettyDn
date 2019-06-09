@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FadeScrollEffectComponent } from './fade-scroll-effect.component';
+
+import { FadeScrollItemComponent } from './components/fade-scroll-item/fade-scroll-item.component';
+import { FadeScrollWrapperComponent } from './components/fade-scroll-wrapper/fade-scroll-wrapper.component';
 
 @NgModule({
-  declarations: [FadeScrollEffectComponent],
-  imports: [
-  ],
-  exports: [FadeScrollEffectComponent]
+  declarations: [FadeScrollWrapperComponent, FadeScrollItemComponent],
+  imports: [CommonModule],
+  exports: [FadeScrollWrapperComponent, FadeScrollItemComponent]
 })
-export class FadeScrollEffectModule { }
+export class FadeScrollEffectModule {}

@@ -3,5 +3,5 @@
  */
 
 export * from './lib/fade-scroll-effect.service';
-export * from './lib/fade-scroll-effect.component';
+export * from './lib/components/fade-scroll-wrapper/fade-scroll-wrapper.component';
 export * from './lib/fade-scroll-effect.module';

@@ -1,0 +1,30 @@
+<div class="gallery-card">
+
+  <div class="gallery-card__shadow">
+    <img src="../assets/baby.jpg" alt="image Shadow">
+  </div>
+
+  <a [routerLink]="['/about']">
+
+    <div class="gallery-card__image" [style.backgroundImage]="'url( ../assets/baby.jpg )'"></div>
+    <div class="gallery-card__image_shadow"></div>
+
+  </a>
+  <div class="gallery-card__caption">
+
+    <h2 class="gallery-card__title"> Test </h2>
+
+    <h3 class="gallery-card__sub">
+
+      <span class="gallery-card__sub_text">
+        Lorem, ipsum dolor.
+      </span>
+
+      <span class="gallery-card__sub_detail">
+        View Detail
+      </span>
+    </h3>
+
+  </div>
+
+</div>

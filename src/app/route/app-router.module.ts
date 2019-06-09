@@ -2,6 +2,7 @@ import { CategorySectionComponent } from './../sections/category-section/categor
 import { NgModule } from '@angular/core';
 import { HeroSectionComponent } from '../sections/hero-section/hero-section.component';
 import { Routes, RouterModule } from '@angular/router';
+import { GalleryWrapperSectionComponent } from '../sections/gallery-section/gallery-wrapper-section.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,13 @@ export const routes: Routes = [
     component: HeroSectionComponent,
     data: { isLight: true, isChild: false }
   },
+
+  {
+    path: 'gallery',
+    component: GalleryWrapperSectionComponent,
+    data: { isLight: true }
+  },
+
   { path: '**', redirectTo: 'main' },
   { path: '', redirectTo: 'main', pathMatch: 'full' }
 ];
