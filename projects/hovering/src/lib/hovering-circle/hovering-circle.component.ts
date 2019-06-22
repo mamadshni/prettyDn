@@ -1,13 +1,13 @@
-import { HoveringLineFrom, HoveringLineTo } from './../module/interfaces';
+import { HoveringLineFrom, HoveringTextPos } from './../module/interfaces';
 import {
   Component,
-  OnInit,
   ViewEncapsulation,
   ElementRef,
   Renderer2,
   Attribute,
   AfterViewInit
 } from '@angular/core';
+import { LIB_PREFIX } from '../module/params';
 
 // tslint:disable:component-selector
 // tslint:disable:use-host-property-decorator
@@ -18,7 +18,7 @@ import {
   styleUrls: ['./hovering-circle.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    class: 'hovering-circle'
+    class: `${LIB_PREFIX}-circle`
   }
 })
 export class HoveringCircleComponent implements AfterViewInit {
@@ -27,21 +27,28 @@ export class HoveringCircleComponent implements AfterViewInit {
     private renderer: Renderer2,
 
     @Attribute('from') private lineFrom: HoveringLineFrom,
-    @Attribute('to') private lineTo: HoveringLineTo
+    @Attribute('textPos') private textPose: HoveringTextPos
   ) {}
 
   ngAfterViewInit() {
-    if (HoveringLineFrom[this.lineFrom] != null) {
-      if (HoveringLineTo[this.lineTo] != null) {
-        this.renderer.addClass(
-          this.el.nativeElement,
-          `${this.lineFrom}-${this.lineTo}`
-        );
+    if (this.lineFrom) {
+      if (HoveringLineFrom[this.lineFrom] != null) {
+        this.renderer.addClass(this.el.nativeElement, `line-${this.lineFrom}`);
       } else {
-        console.error('Wrong Value For "To" Attribute in "Hovering Component"');
+        console.error(
+          'Wrong Value For "From" Attribute in "Hovering Component"'
+        );
       }
-    } else {
-      console.error('Wrong Value For "From" Attribute in "Hovering Component"');
+    }
+
+    if (this.textPose) {
+      if (HoveringTextPos[this.textPose] != null) {
+        this.renderer.addClass(this.el.nativeElement, `text-${this.textPose}`);
+      } else {
+        console.error(
+          'Wrong Value For "textPose" Attribute in "Hovering Component"'
+        );
+      }
     }
   }
 }

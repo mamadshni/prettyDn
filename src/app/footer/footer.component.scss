@@ -25,30 +25,17 @@
     position: fixed;
     right: 120px;
     bottom: 80px;
-    height: 60px;
-    width: 60px;
-    padding: 10px;
-    box-sizing: border-box;
-    pointer-events: initial;
     z-index: 10;
     opacity: 1;
-    // transform: scale(0.7);
-    transition: all 0.4s cubic-bezier(0.68, 0, 0.265, 1) 0.2s;
   }
 
   // footer-circle__left
   &-circle__left {
     position: fixed;
-    box-sizing: border-box;
     left: 120px;
     bottom: 80px;
-    height: 60px;
-    width: 60px;
     z-index: 10;
-    pointer-events: initial;
     opacity: 1;
-    transform: scale(0.7);
-    transition: all 0.4s cubic-bezier(0.68, 0, 0.265, 1) 0.2s;
   }
 
 

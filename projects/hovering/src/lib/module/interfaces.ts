@@ -1,13 +1,17 @@
 export enum HoveringLineFrom {
-  topLeft = 'topLeft',
-  topRight = 'topRight',
-  bottomLeft = 'bottomLeft',
-  bottomRight = 'bottomRight'
+  'top-left',
+  'left-top',
+  'top-right',
+  'right-top',
+  'bottom-left',
+  'left-bottom',
+  'bottom-right',
+  'right-bottom'
 }
 
-export enum HoveringLineTo {
-  top = 'top',
-  left = 'left',
-  right = 'Right',
-  bottom = 'bottom'
+export enum HoveringTextPos {
+  'top',
+  'left',
+  'right',
+  'bottom'
 }
