@@ -22,7 +22,7 @@
 
     <!-- Logo -->
     <div class="logo">
-      <a [routerLink]="['/']" (click)="closeMenu()">
+      <a [routerLink]="['/']" [class.light]="isLight" [class.dark]="!isLight" (click)="closeMenu()">
         <div class="header--burger__circle"></div>
       </a>
     </div>
@@ -31,13 +31,16 @@
 
 </header>
 
-<overlay-menu-effect [isOpen]="isMenuOpened">
+<overlay-menu-effect [ngClass]="{'light': !isLight}" [isOpen]="isMenuOpened" (click)="closeMenu()">
+
+  <div class=overlay-menu__shadow overlayMenuShadow></div>
+
   <ng-template overlayMenu>
 
-    <span listItems (click)="closeMenu()"> <a [routerLink]="'/main'"> Home </a> </span>
-    <span listItems (click)="closeMenu()"> <a [routerLink]="'/about'"> About </a> </span>
-    <span listItems (click)="closeMenu()"> <a [routerLink]="'/gallery'"> Gallery </a> </span>
-    <span listItems (click)="closeMenu()">Main</span>
+    <span listItems> <a [routerLink]="'/'"> Home </a> </span>
+    <span listItems> <a [routerLink]="'/about'"> About </a> </span>
+    <span listItems> <a [routerLink]="'/gallery'"> Gallery </a> </span>
+    <!-- <span listItems>Main</span> -->
 
   </ng-template>
 </overlay-menu-effect>

@@ -1,3 +1,6 @@
-<div class="overlay-menu__wrapper" *ngIf="isOpen" @overlayMenuAnimation>
+<div class=overlay-menu__shadow overlayMenuShadow *ngIf="isOpen"></div>
+<div class="overlay-menu__wrapper" *ngIf="isOpen">
+
   <ng-container *ngTemplateOutlet="menuDirective.tmpRef"></ng-container>
+
 </div>

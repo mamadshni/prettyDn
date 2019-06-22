@@ -1,12 +1,18 @@
 import { CategoryInterface } from './../../data/category-data/category-data.interface';
 import { CategoryDataService } from './../../data/category-data/category-data.service';
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef
+} from '@angular/core';
 // tslint:disable:variable-name
 
 @Component({
   selector: 'app-category-section',
   templateUrl: './category-section.component.html',
-  styleUrls: ['./category-section.component.scss']
+  styleUrls: ['./category-section.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CategorySectionComponent implements OnInit {
   items: CategoryInterface[];
@@ -20,11 +26,10 @@ export class CategorySectionComponent implements OnInit {
       lockAnchors: true,
       touchSensitivity: 25,
       sectionSelector: '.full-page-scroll',
-      scrollingSpeed: 1000,
+      scrollingSpeed: 800,
       max: 3,
       perspective: 1000,
       reverse: true,
-      speed: 400,
       easingcss3: 'cubic-bezier(.84,.05,.3,1.05)',
 
       onLeave: (origin, destination, direction) => {

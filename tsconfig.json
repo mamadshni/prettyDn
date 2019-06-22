@@ -42,6 +42,12 @@
       ],
       "fade-scroll-effect/*": [
         "dist/fade-scroll-effect/*"
+      ],
+      "hovering": [
+        "dist/hovering"
+      ],
+      "hovering/*": [
+        "dist/hovering/*"
       ]
     }
   }

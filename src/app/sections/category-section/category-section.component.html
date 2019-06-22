@@ -1,10 +1,8 @@
 <div fullpage id="fullpage2" [options]="config">
   <overlay-text-effect>
 
-    <div class="full-page-scroll" *ngFor="let item of items ; let i = index">
-      <app-category-item-card [indexCategory]="i" [enterItem]="enterIndex === i">
-      </app-category-item-card>
-    </div>
+    <app-category-item-card class="full-page-scroll" *ngFor="let item of items ; let i = index" [indexCategory]="i">
+    </app-category-item-card>
 
   </overlay-text-effect>
 </div>

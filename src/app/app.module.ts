@@ -2,6 +2,7 @@ import { FadeScrollEffectModule } from 'fade-scroll-effect';
 import { MouseEffectModule } from 'mouse-effect';
 import { OverlayMenuEffectModule } from 'overlay-menu-effect';
 import { ScrollEffectModule } from 'scroll-effect';
+import { HoveringModule } from 'hovering';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ import { GalleryWrapperSectionComponent } from './sections/gallery-section/galle
 import { GalleryCardComponent } from './sections/gallery-section/gallery-card/gallery-card.component';
 
 import { MaterialModule } from './material/material.module';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { MaterialModule } from './material/material.module';
     CategorySectionComponent,
     CategoryItemCardComponent,
     GalleryWrapperSectionComponent,
-    GalleryCardComponent
+    GalleryCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     AngularFullpageModule,
     FadeScrollEffectModule,
-    MaterialModule
+    MaterialModule,
+    HoveringModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,38 +1,36 @@
 import { CategoryInterface } from './../../../data/category-data/category-data.interface';
 import { CategoryDataService } from './../../../data/category-data/category-data.service';
 import { Router } from '@angular/router';
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef
+} from '@angular/core';
 
 import { TweenLite, Power2 } from 'gsap';
+// tslint:disable:use-host-property-decorator
 
 @Component({
   selector: 'app-category-item-card',
   templateUrl: './category-item-card.component.html',
-  styleUrls: ['./category-item-card.component.scss']
+  styleUrls: ['./category-item-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'item-card'
+  }
 })
 export class CategoryItemCardComponent implements OnInit {
   category: CategoryInterface;
 
   @Input() indexCategory: number;
 
-  @Input('enterItem') set enterItem(condition: boolean) {
-    if (condition) {
-      this.imageCard.nativeElement.classList.add('active');
-      this.imageCardMirror.nativeElement.classList.add('active');
-      this.captionText.nativeElement.classList.add('active');
-    } else {
-      this.imageCard.nativeElement.classList.remove('active');
-      this.imageCardMirror.nativeElement.classList.remove('active');
-      this.captionText.nativeElement.classList.remove('active');
-    }
-  }
-
   @ViewChild('categoryWrapper') categoryWrapper: ElementRef;
-  @ViewChild('imageSplit') imageSplit: ElementRef;
-  @ViewChild('imageCard') imageCard: ElementRef;
-  @ViewChild('imageCardMirror') imageCardMirror: ElementRef;
+  @ViewChild('imageWrapper') imageWrapper: ElementRef;
   @ViewChild('captionWrapper') captionWrapper: ElementRef;
-  @ViewChild('captionText') captionText: ElementRef;
 
   constructor(
     private router: Router,
@@ -52,7 +50,7 @@ export class CategoryItemCardComponent implements OnInit {
       onComplete: this.navigation.bind(this),
       ease: Power2.easeOut
     });
-    TweenLite.to(this.imageSplit.nativeElement, 0.5, {
+    TweenLite.to(this.imageWrapper.nativeElement, 0.5, {
       opacity: 0.6,
       ease: Power2.easeOut
     });

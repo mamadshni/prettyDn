@@ -22,7 +22,8 @@ import { overlayMenuAnimation } from '../../overlay.animation';
   encapsulation: ViewEncapsulation.None,
   animations: [overlayMenuAnimation()],
   host: {
-    class: 'overlay-menu__container'
+    class: 'overlay-menu__container',
+    '[@overlayMenuAnimation]': 'isOpen'
   }
 })
 export class OverlayMenuEffectComponent implements OnInit, OnDestroy {

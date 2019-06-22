@@ -1,5 +1,4 @@
 import { Subscription } from 'rxjs';
-import { OverlayMenuEffectService } from 'overlay-menu-effect';
 import { ImageMouseEffectDirective } from '../../directives/image-mouse-effect.directive';
 import {
   Component,
@@ -33,14 +32,13 @@ const movementSpeed = 80;
 })
 export class MouseMoveEffectComponent implements OnInit, OnDestroy {
   isMenuOpen = false;
-  private subscription: Subscription;
+
   private bindMouseEvent = this.mouseMoveFunction.bind(this);
 
   @ContentChild(ImageMouseEffectDirective)
   imageDirective: ImageMouseEffectDirective;
 
   @ViewChild('mouseWrapper') mouseWrapper: ElementRef<HTMLDivElement>;
-  @ViewChild('imageWrapper') imageWrapper: ElementRef<HTMLDivElement>;
 
   @HostListener('window:resize') onResize() {
     if (!this.isMenuOpen) {
@@ -52,30 +50,14 @@ export class MouseMoveEffectComponent implements OnInit, OnDestroy {
     }
   }
 
-  constructor(
-    private zone: NgZone,
-    private elemRef: ElementRef,
-    private overlayMenuService: OverlayMenuEffectService
-  ) {}
+  constructor(private zone: NgZone, private elemRef: ElementRef) {}
 
   ngOnInit() {
-    this.subscription = this.overlayMenuService.isMenuOpened.subscribe(
-      (condition: boolean) => {
-        if (condition) {
-          this.deleteEffect();
-          this.blurEffect();
-        } else {
-          this.addEffect();
-        }
-        this.isMenuOpen = condition;
-      }
-    );
     this.addEffect();
   }
 
   ngOnDestroy() {
     this.deleteEffect();
-    this.subscription.unsubscribe();
   }
 
   addEffect() {
@@ -87,7 +69,6 @@ export class MouseMoveEffectComponent implements OnInit, OnDestroy {
         )
       );
     }
-    this.removeBlur();
   }
 
   deleteEffect() {
@@ -98,20 +79,6 @@ export class MouseMoveEffectComponent implements OnInit, OnDestroy {
         this.bindMouseEvent
       )
     );
-  }
-
-  blurEffect() {
-    TweenLite.to(this.imageWrapper.nativeElement, 0.3, {
-      scale: 1.2,
-      webkitFilter: 'blur(10px)'
-    });
-  }
-
-  removeBlur() {
-    TweenLite.to(this.imageWrapper.nativeElement, 0.3, {
-      scale: 1.1,
-      webkitFilter: 'blur(0px)'
-    });
   }
 
   mouseMoveFunction(event: MouseEvent) {

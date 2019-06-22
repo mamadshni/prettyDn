@@ -1,12 +1,18 @@
 import { CategoryInterface } from './../../data/category-data/category-data.interface';
 import { CategoryDataService } from './../../data/category-data/category-data.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
   templateUrl: './hero-section.component.html',
-  styleUrls: ['./hero-section.component.scss']
+  styleUrls: ['./hero-section.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroSectionComponent implements OnInit {
   backDrop: CategoryInterface = {
