@@ -22,13 +22,14 @@ import { CategoryItemCardComponent } from './sections/category-section/category-
 import { GalleryWrapperSectionComponent } from './sections/gallery-section/gallery-wrapper-section.component';
 import { GalleryCardComponent } from './sections/gallery-section/gallery-card/gallery-card.component';
 
-import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './footer/footer.component';
-import { GalleryItemComponent } from './items/gallery-item/gallery-item.component';
 import { FormsModule } from '@angular/forms';
 import { GallerySearchFilterPipe } from './pipes/gallery-search-filter.pipe';
 import { GalleryFilterComponent } from './sections/gallery-section/gallery-filter/gallery-filter.component';
 import { GalleryCatFilterPipe } from './pipes/gallery-cat-filter.pipe';
+import { AboutSectionComponent } from './sections/about-section/about-section.component';
+import { AboutContentComponent } from './sections/about-section/about-content/about-content.component';
+import { GalleryShowComponent } from './sections/gallery-section/gallery-show/gallery-show.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,10 +42,12 @@ import { GalleryCatFilterPipe } from './pipes/gallery-cat-filter.pipe';
     GalleryWrapperSectionComponent,
     GalleryCardComponent,
     FooterComponent,
-    GalleryItemComponent,
     GallerySearchFilterPipe,
     GalleryFilterComponent,
-    GalleryCatFilterPipe
+    GalleryCatFilterPipe,
+    AboutSectionComponent,
+    AboutContentComponent,
+    GalleryShowComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,6 @@ import { GalleryCatFilterPipe } from './pipes/gallery-cat-filter.pipe';
     AppRoutingModule,
     AngularFullpageModule,
     FadeScrollEffectModule,
-    MaterialModule,
     HoveringModule,
     CommonModule,
     FormsModule

@@ -1,0 +1,28 @@
+<div class="close-preview" (click)="close()"></div>
+
+<hovering-circle rightBtn from="left-bottom" textPos="left" class="image-circle__right" (click)="next()">
+
+  <i hIcon class="material-icons">arrow_forward</i>
+
+  <p hText>Next</p>
+
+</hovering-circle>
+
+<div class="image-holder"  [ngClass]="{'landscape': isLandscape,'portrait': !isLandscape}" [@move]='index'>
+
+  <img moveImage class="image" [src]="gallery.imageUrl" [alt]="gallery.title">
+
+  <div detailImage class="image-detail">
+    <h3 class="image-detail__title">{{gallery.title}}</h3>
+    <h4  class="image-detail__summery">{{gallery.description}}</h4>
+  </div>
+</div>
+
+
+<hovering-circle leftBtn from="right-bottom" textPos="right" class="image-circle__left" (click)="prev()">
+
+  <i hIcon class="material-icons">arrow_back</i>
+
+  <p hText>Back</p>
+
+</hovering-circle>

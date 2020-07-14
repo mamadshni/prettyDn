@@ -4,7 +4,7 @@
     <img [src]="gallery.imageUrl" alt="image Shadow">
   </div>
 
-  <a [routerLink]="['/about']">
+  <a (click)="preViewPic()">
 
     <div class="gallery-card__image" [style.backgroundImage]="'url( '+ gallery.imageUrl+ ')'"></div>
     <div class="gallery-card__image_shadow"></div>
@@ -21,7 +21,7 @@
       </span>
 
       <span class="gallery-card__sub_detail">
-        View Detail
+        View Picture
       </span>
     </h3>
 

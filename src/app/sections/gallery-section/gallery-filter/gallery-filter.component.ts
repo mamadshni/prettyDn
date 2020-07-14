@@ -1,4 +1,4 @@
-import { fadeGalleryFilter, filterItems } from './gallery-filter.animation';
+import { fadeGalleryFilter } from './gallery-filter.animation';
 import { CrossDataService } from './../../../data/cross-data/cross-data.service';
 import {
   Component,
@@ -12,7 +12,7 @@ import {
   selector: 'app-gallery-filter',
   templateUrl: './gallery-filter.component.html',
   styleUrls: [ './gallery-filter.component.scss' ],
-  animations: [ fadeGalleryFilter, filterItems ]
+  animations: [ fadeGalleryFilter ]
 })
 export class GalleryFilterComponent implements OnInit {
   @HostBinding('@fadeFilter') val = 'in';

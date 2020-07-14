@@ -43,7 +43,3 @@ export const fadeGalleryFilter = trigger('fadeFilter', [
     animate(100, style({ opacity: 0 }))
   ])
 ]);
-
-export const filterItems = trigger('transformFilterItems', [
-  transition(':enter', [])
-]);

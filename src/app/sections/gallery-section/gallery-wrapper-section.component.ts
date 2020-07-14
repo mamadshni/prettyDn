@@ -15,9 +15,13 @@ import {
 })
 export class GalleryWrapperSectionComponent implements OnInit {
   filterCat = '';
-  filterText = '';
+  // SearchText = '';
   datas: GalleryInterface[];
+
   isFilterMenuOpen = false;
+  isPreViewGalleryOpen = false;
+  // isSearchMenuOpen = false;
+
   constructor(
     private galleryDataService: GalleryDataService,
     private crossDataService: CrossDataService,
@@ -26,9 +30,18 @@ export class GalleryWrapperSectionComponent implements OnInit {
 
   ngOnInit() {
     this.datas = this.galleryDataService.getGallerys();
+
     this.crossDataService.isFilterMenuOpened.subscribe((val) => {
       this.isFilterMenuOpen = val;
     });
+
+    this.crossDataService.isPreViewGalleryOpened.subscribe((val) => {
+      this.isPreViewGalleryOpen = val;
+    });
+
+    // this.crossDataService.isSearchMenuOpened.subscribe((val) => {
+    //   this.isSearchMenuOpen = val;
+    // });
   }
 
   changeFilterCat(cat: string) {
@@ -39,4 +52,13 @@ export class GalleryWrapperSectionComponent implements OnInit {
     window.scrollBy(0, 1);
     window.scrollBy(0, -1);
   }
+
+  // changeSearchCat(text: string) {
+  //   this.SearchText = text;
+
+  //   // TODO: fix this shit :D
+
+  //   window.scrollBy(0, 1);
+  //   window.scrollBy(0, -1);
+  // }
 }

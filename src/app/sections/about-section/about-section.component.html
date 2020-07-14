@@ -5,8 +5,8 @@
     <overlay-text-effect>
 
       <div class="hero-title">
-        <h1>{{backDrop.title}}</h1>
-        <p>{{backDrop.description}}</p>
+        <h1>About</h1>
+        <p>ME</p>
       </div>
 
     </overlay-text-effect>
@@ -19,7 +19,7 @@
 
       <ng-template imageMouseEffect>
 
-        <img class="backdrop-image" [src]="backDrop.imageUrl" alt="">
+        <img class="backdrop-image" src="../assets/bg.jpg" alt="">
 
       </ng-template>
 
@@ -29,7 +29,7 @@
 
 
   <overlay-text-effect>
-    <app-hero-content [detail]="backDrop.detail"></app-hero-content>
+    <app-about-content></app-about-content>
   </overlay-text-effect>
 
 

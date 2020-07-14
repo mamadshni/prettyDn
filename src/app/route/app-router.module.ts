@@ -1,3 +1,4 @@
+import { AboutSectionComponent } from './../sections/about-section/about-section.component';
 import { CategorySectionComponent } from './../sections/category-section/category-section.component';
 import { NgModule } from '@angular/core';
 import { HeroSectionComponent } from '../sections/hero-section/hero-section.component';
@@ -12,13 +13,13 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    component: HeroSectionComponent,
-    data: { isLight: true, isChild: true }
+    component: AboutSectionComponent,
+    data: { isLight: false }
   },
   {
     path: 'category/:id',
     component: HeroSectionComponent,
-    data: { isLight: true, isChild: false }
+    data: { isLight: true }
   },
 
   {
@@ -30,7 +31,7 @@ export const routes: Routes = [
   { path: '**', redirectTo: 'main' }
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

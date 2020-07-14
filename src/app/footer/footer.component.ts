@@ -19,6 +19,7 @@ export class FooterComponent implements OnInit {
   activedPath: string;
 
   isFilterMenuOpen = false;
+  // isSearchMenuOpen = false;
 
   constructor(
     private fullpageService: FullpageService,
@@ -51,5 +52,17 @@ export class FooterComponent implements OnInit {
   triggerFilterMenu() {
     this.isFilterMenuOpen = !this.isFilterMenuOpen;
     this.crossDataService.isFilterMenuOpened.next(this.isFilterMenuOpen);
+  }
+  // triggerSearchMenu() {
+  //   this.isFilterMenuOpen = !this.isFilterMenuOpen;
+  //   this.crossDataService.isSearchMenuOpened.next(this.isSearchMenuOpen);
+  // }
+
+  goTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

@@ -39,11 +39,13 @@
 
 <ng-template #GallerySection>
 
-  <hovering-circle from="top-right" textPos="left" class="footer-circle__right">
+  <hovering-circle from="top-right" textPos="left" class="footer-circle__right" (click)="goTop()">
 
-    <i hIcon class="material-icons">arrow_upward</i>
+    <span hIcon class="material-icons">
+      arrow_upward
+    </span>
 
-    <p hText>First One</p>
+    <p hText>go Top</p>
 
   </hovering-circle>
 

@@ -95,6 +95,12 @@ export class GalleryDataService {
       description: 'Lorem ipsum dolor',
       imageUrl: '../assets/baby5.jpg',
       cat: [ 'baby' ]
+    },
+    {
+      title: 'Test16',
+      description: 'Lorem ipsum dolor',
+      imageUrl: '../assets/ver.jpeg',
+      cat: [ 'sea', 'tree' ]
     }
   ];
 
@@ -106,5 +112,25 @@ export class GalleryDataService {
 
   getGallery(index: number): GalleryInterface {
     return this.gallery.slice()[index];
+  }
+
+  findGalleryIndex(item: GalleryInterface) {
+    return this.gallery.findIndex((x) => x === item);
+  }
+
+  getNextIndex(isNext: boolean, index: number) {
+    if (isNext) {
+      if (index + 1 === this.gallery.length) {
+        return 0;
+      } else {
+        return index + 1;
+      }
+    } else {
+      if (index - 1 < 0) {
+        return this.gallery.length - 1;
+      } else {
+        return index - 1;
+      }
+    }
   }
 }
