@@ -1,80 +1,15 @@
+<app-gallery-filter *ngIf="isFilterMenuOpen" (catValue)="changeFilterCat($event)"></app-gallery-filter>
 <overlay-text-effect>
 
   <fade-scroll-wrapper>
 
-    <fade-scroll-item>
+    <fade-scroll-item *ngFor="let data of datas| galleryCatFilter:filterCat">
 
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
+      <app-gallery-card [gallery]="data"></app-gallery-card>
 
     </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
-    <fade-scroll-item>
-
-      <app-gallery-card></app-gallery-card>
-
-    </fade-scroll-item>
-
 
   </fade-scroll-wrapper>
+  
 
 </overlay-text-effect>

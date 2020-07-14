@@ -1,0 +1,104 @@
+:host {
+  position: fixed;
+  z-index: 150;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.89);
+}
+
+.gallery-filter_ {
+  &_wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  &_cat-holder {
+    display: table-cell;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &_close {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: url(../../../../assets/icon/close.png) 15 15, auto;
+  }
+  &_title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 28px;
+    color: #999;
+  }
+
+  &_categories {
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+    z-index: 15;
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    pointer-events: none;
+
+    &:hover {
+      & > * {
+        opacity: 0.5;
+      }
+      & > *:hover {
+        opacity: 1;
+
+        ::after {
+          width: 150%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &_cat-item {
+    pointer-events: auto;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    margin: 20px 45px;
+    opacity: 1;
+    position: relative;
+    color: #333;
+    transition: 0.2s ease;
+    font-size: 24px;
+  }
+  &_cat-text {
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    z-index: 15;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: #dcf5ef;
+      transition: 0.25s 0.05s ease;
+      opacity: 0;
+    }
+  }
+}

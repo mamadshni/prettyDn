@@ -33,13 +33,13 @@
 
 <overlay-menu-effect [ngClass]="{'light': !isLight}" [isOpen]="isMenuOpened" (click)="closeMenu()">
 
-  <div class=overlay-menu__shadow overlayMenuShadow></div>
+  <div class='overlay-menu__shadow' overlayMenuShadow></div>
 
   <ng-template overlayMenu>
 
-    <span listItems> <a [routerLink]="'/'"> Home </a> </span>
-    <span listItems> <a [routerLink]="'/about'"> About </a> </span>
-    <span listItems> <a [routerLink]="'/gallery'"> Gallery </a> </span>
+    <span class="overlay-menu__items" listItems> <a [routerLink]="'/'"> Home </a> </span>
+    <span class="overlay-menu__items" listItems> <a [routerLink]="'/about'"> About </a> </span>
+    <span class="overlay-menu__items" listItems> <a [routerLink]="'/gallery'"> Gallery </a> </span>
     <!-- <span listItems>Main</span> -->
 
   </ng-template>

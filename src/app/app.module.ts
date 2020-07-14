@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { FadeScrollEffectModule } from 'fade-scroll-effect';
 import { MouseEffectModule } from 'mouse-effect';
 import { OverlayMenuEffectModule } from 'overlay-menu-effect';
@@ -23,6 +24,11 @@ import { GalleryCardComponent } from './sections/gallery-section/gallery-card/ga
 
 import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './footer/footer.component';
+import { GalleryItemComponent } from './items/gallery-item/gallery-item.component';
+import { FormsModule } from '@angular/forms';
+import { GallerySearchFilterPipe } from './pipes/gallery-search-filter.pipe';
+import { GalleryFilterComponent } from './sections/gallery-section/gallery-filter/gallery-filter.component';
+import { GalleryCatFilterPipe } from './pipes/gallery-cat-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +40,11 @@ import { FooterComponent } from './footer/footer.component';
     CategoryItemCardComponent,
     GalleryWrapperSectionComponent,
     GalleryCardComponent,
-    FooterComponent
+    FooterComponent,
+    GalleryItemComponent,
+    GallerySearchFilterPipe,
+    GalleryFilterComponent,
+    GalleryCatFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -46,9 +56,11 @@ import { FooterComponent } from './footer/footer.component';
     AngularFullpageModule,
     FadeScrollEffectModule,
     MaterialModule,
-    HoveringModule
+    HoveringModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {}

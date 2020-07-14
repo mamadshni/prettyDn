@@ -11,6 +11,7 @@
   font-size: 1.3em;
 
   &-svg {
+
     //   lib-hovering-circle-svg__wrapper
     &__wrapper {
       position: relative;
@@ -83,8 +84,10 @@
   // Hover
   &:hover {
     .lib-hovering-circle {
+
       // lib-hovering-circle-svg
       &-svg {
+
         // lib-hovering-circle-svg__inner
         &__inner {
           opacity: 0.2;
@@ -114,6 +117,7 @@
         transition: all 0.3s ease-out 0.28s;
         opacity: 1;
         right: 2.5em;
+        visibility: visible;
       }
     }
   }
@@ -121,6 +125,7 @@
 
 // === === lib-hovering Directives === ===
 .lib-hovering {
+
   // lib-hovering-icon
   &-icon {
     position: absolute;
@@ -137,6 +142,7 @@
     right: 4em;
     top: 50%;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.2s ease-in-out;
     margin: 0;
     transform: translate(0, -50%);
@@ -147,8 +153,10 @@
 
 .line-top-left {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(180deg) rotateZ(180deg);
@@ -166,8 +174,10 @@
 
 .line-left-top {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(0deg) rotateZ(270deg);
@@ -185,8 +195,10 @@
 
 .line-right-top {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(180deg) rotateZ(90deg);
@@ -204,8 +216,10 @@
 
 .line-top-right {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(0deg) rotateZ(0deg);
@@ -223,8 +237,10 @@
 
 .line-bottom-right {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(180deg) rotateZ(0deg);
@@ -242,8 +258,10 @@
 
 .line-right-bottom {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(0deg) rotateZ(90deg);
@@ -261,8 +279,10 @@
 
 .line-left-bottom {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(180deg) rotateZ(270deg);
@@ -280,8 +300,10 @@
 
 .line-bottom-left {
   .lib-hovering-circle {
+
     // lib-hovering-circle-svg
     &-svg {
+
       //   lib-hovering-circle-svg__outer
       &__outer {
         transform: rotateX(0deg) rotateZ(180deg);

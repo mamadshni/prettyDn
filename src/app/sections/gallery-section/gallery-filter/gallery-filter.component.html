@@ -1,0 +1,29 @@
+<div class="gallery-filter__wrapper">
+  <div class="gallery-filter__cat-holder">
+
+    <div class="gallery-filter__close" (click)="close()"></div>
+
+    <p class="gallery-filter__title">Categories:</p>
+    <ul class="gallery-filter__categories" [@transformFilterItems] = "'in'">
+      
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('')">All</p>
+      </li>
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('tree')">Tree</p>
+      </li>
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('baby')">Baby</p>
+      </li>
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('sea')">Sea</p>
+      </li>
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('mountain')">Mountain</p>
+      </li>
+      <li class="gallery-filter__cat-item" filterItems>
+        <p class="gallery-filter__cat-text" (click)="selectCat('moon')">Moon</p>
+      </li>
+    </ul>
+  </div>
+</div>

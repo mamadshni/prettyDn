@@ -6,15 +6,14 @@ import { GalleryWrapperSectionComponent } from '../sections/gallery-section/gall
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'main',
     component: CategorySectionComponent,
-    data: { isLight: true },
-    pathMatch: 'full'
+    data: { isLight: true }
   },
   {
     path: 'about',
     component: HeroSectionComponent,
-    data: { isLight: false, isChild: true }
+    data: { isLight: true, isChild: true }
   },
   {
     path: 'category/:id',
@@ -28,7 +27,7 @@ export const routes: Routes = [
     data: { isLight: true }
   },
 
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'main' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

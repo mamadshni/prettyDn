@@ -1,4 +1,4 @@
-<div fullpage id="fullpage2" [options]="config">
+<div fullpage id="fullpage2" [options]="config" (ref)="getRef($event)">
   <overlay-text-effect>
 
     <app-category-item-card class="full-page-scroll" *ngFor="let item of items ; let i = index" [indexCategory]="i">

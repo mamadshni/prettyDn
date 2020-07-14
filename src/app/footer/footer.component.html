@@ -1,23 +1,59 @@
 <footer class="footer__wrapper footer-category">
-  <!-- <div class="footer-circle__right"></div> -->
 
-  <!-- <div class="footer-circle__left"></div> -->
+  <span [ngSwitch]="activedPath">
 
-  <hovering-circle from="left-bottom" textPos="left" class="footer-circle__right">
+    <ng-container [ngTemplateOutlet]="CategorySection" *ngSwitchCase="'main'"></ng-container>
 
-    <i hIcon class="material-icons">sentiment_satisfied</i>
+    <ng-container [ngTemplateOutlet]="GallerySection" *ngSwitchCase="'gallery'"></ng-container>
 
-    <p hText>Lorem ipsum</p>
+  </span>
 
-  </hovering-circle>
-
-
-  <hovering-circle from="right-bottom" textPos="right" class="footer-circle__left">
-
-    <i hIcon class="material-icons">sentiment_dissatisfied</i>
-
-    <p hText>Lorem ipsum</p>
-
-  </hovering-circle>
 
 </footer>
+
+<!-- Category Section  -->
+
+<ng-template #CategorySection>
+
+  <hovering-circle from="left-bottom" textPos="left" class="footer-circle__right" (click)="toFirstItem()">
+
+    <i hIcon class="material-icons">arrow_upward</i>
+
+    <p hText>First One</p>
+
+  </hovering-circle>
+
+
+  <hovering-circle from="right-bottom" textPos="right" class="footer-circle__left" (click)="toLastItem()">
+
+    <i hIcon class="material-icons">arrow_downward</i>
+
+    <p hText>Last One</p>
+
+  </hovering-circle>
+
+</ng-template>
+
+<!-- Gallery Section -->
+
+
+<ng-template #GallerySection>
+
+  <hovering-circle from="top-right" textPos="left" class="footer-circle__right">
+
+    <i hIcon class="material-icons">arrow_upward</i>
+
+    <p hText>First One</p>
+
+  </hovering-circle>
+
+
+  <hovering-circle from="top-left" textPos="right" class="footer-circle__left" (click)="triggerFilterMenu()">
+
+    <i hIcon class="material-icons">apps</i>
+
+    <p hText>Filter</p>
+
+  </hovering-circle>
+
+</ng-template>

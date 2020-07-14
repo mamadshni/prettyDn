@@ -40,11 +40,11 @@ export class MouseRotateEffectDirective implements OnInit, OnDestroy {
 
   addVanilla(): void {
     VanillaTilt.init(this.elemRef.nativeElement, {
-      max: 4,
+      max: 3,
       perspective: 1000,
       reverse: true,
       speed: 400,
-      easing: 'linear'
+      easing: 'cubic-bezier(.19,.48,.53,.96)'
     });
   }
 

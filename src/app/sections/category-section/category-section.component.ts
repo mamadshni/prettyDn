@@ -1,3 +1,4 @@
+import { FullpageService } from './fullpage.service';
 import { CategoryInterface } from './../../data/category-data/category-data.interface';
 import { CategoryDataService } from './../../data/category-data/category-data.service';
 import {
@@ -19,9 +20,11 @@ export class CategorySectionComponent implements OnInit {
   enterIndex = 0;
 
   config;
-  fullpage_api;
 
-  constructor(private categoryDataService: CategoryDataService) {
+  constructor(
+    private categoryDataService: CategoryDataService,
+    private fullpageService: FullpageService
+  ) {
     this.config = {
       lockAnchors: true,
       touchSensitivity: 25,
@@ -37,6 +40,10 @@ export class CategorySectionComponent implements OnInit {
         // this.categoryAnimationConfig.direction = direction;
       }
     };
+  }
+
+  getRef(fullPageRef) {
+    this.fullpageService.fullpageApi = fullPageRef;
   }
 
   ngOnInit() {

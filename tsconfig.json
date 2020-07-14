@@ -48,6 +48,12 @@
       ],
       "hovering/*": [
         "dist/hovering/*"
+      ],
+      "gallery": [
+        "dist/gallery"
+      ],
+      "gallery/*": [
+        "dist/gallery/*"
       ]
     }
   }
