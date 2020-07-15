@@ -1,0 +1,21 @@
+{
+  "name": "mouse-effect",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/mouse-effect.umd.js",
+  "module": "fesm5/mouse-effect.js",
+  "es2015": "fesm2015/mouse-effect.js",
+  "esm5": "esm5/mouse-effect.js",
+  "esm2015": "esm2015/mouse-effect.js",
+  "fesm5": "fesm5/mouse-effect.js",
+  "fesm2015": "fesm2015/mouse-effect.js",
+  "typings": "mouse-effect.d.ts",
+  "metadata": "mouse-effect.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

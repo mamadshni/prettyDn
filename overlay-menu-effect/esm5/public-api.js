@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/*
+ * Public API Surface of overlay-menu-effect
+ */
+export { OverlayMenuEffectService } from './lib/overlay-menu-effect.service';
+export { OverlayMenuEffectComponent } from './lib/components/overlay-menu-effect/overlay-menu-effect.component';
+export { OverlayMenuEffectModule } from './lib/overlay-menu-effect.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL292ZXJsYXktbWVudS1lZmZlY3QvIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFJQSx5Q0FBYyxtQ0FBbUMsQ0FBQztBQUNsRCwyQ0FBYyxvRUFBb0UsQ0FBQztBQUNuRix3Q0FBYyxrQ0FBa0MsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygb3ZlcmxheS1tZW51LWVmZmVjdFxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL292ZXJsYXktbWVudS1lZmZlY3Quc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9jb21wb25lbnRzL292ZXJsYXktbWVudS1lZmZlY3Qvb3ZlcmxheS1tZW51LWVmZmVjdC5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvb3ZlcmxheS1tZW51LWVmZmVjdC5tb2R1bGUnO1xuIl19

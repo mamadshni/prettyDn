@@ -1,0 +1,12 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { ScrollEffectService, ScrollEffectComponent, ScrollEffectModule } from './public-api';
+export { fadeInOutAnim as ɵa, opacity as ɵb } from './lib/animation';
+export { ScrollBackdropDirective as ɵd } from './lib/directives/scroll-backdrop.directive';
+export { ScrollTitleDirective as ɵc } from './lib/directives/scroll-title.directive';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2Nyb2xsLWVmZmVjdC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL3Njcm9sbC1lZmZlY3QvIiwic291cmNlcyI6WyJzY3JvbGwtZWZmZWN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFJQSwrRUFBYyxjQUFjLENBQUM7QUFFN0IsT0FBTyxFQUFDLGFBQWEsSUFBSSxFQUFFLEVBQUMsT0FBTyxJQUFJLEVBQUUsRUFBQyxNQUFNLGlCQUFpQixDQUFDO0FBQ2xFLE9BQU8sRUFBQyx1QkFBdUIsSUFBSSxFQUFFLEVBQUMsTUFBTSw0Q0FBNEMsQ0FBQztBQUN6RixPQUFPLEVBQUMsb0JBQW9CLElBQUksRUFBRSxFQUFDLE1BQU0seUNBQXlDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEdlbmVyYXRlZCBidW5kbGUgaW5kZXguIERvIG5vdCBlZGl0LlxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vcHVibGljLWFwaSc7XG5cbmV4cG9ydCB7ZmFkZUluT3V0QW5pbSBhcyDJtWEsb3BhY2l0eSBhcyDJtWJ9IGZyb20gJy4vbGliL2FuaW1hdGlvbic7XG5leHBvcnQge1Njcm9sbEJhY2tkcm9wRGlyZWN0aXZlIGFzIMm1ZH0gZnJvbSAnLi9saWIvZGlyZWN0aXZlcy9zY3JvbGwtYmFja2Ryb3AuZGlyZWN0aXZlJztcbmV4cG9ydCB7U2Nyb2xsVGl0bGVEaXJlY3RpdmUgYXMgybVjfSBmcm9tICcuL2xpYi9kaXJlY3RpdmVzL3Njcm9sbC10aXRsZS5kaXJlY3RpdmUnOyJdfQ==

@@ -1,0 +1,18 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FadeScrollItemComponent } from './components/fade-scroll-item/fade-scroll-item.component';
+import { FadeScrollWrapperComponent } from './components/fade-scroll-wrapper/fade-scroll-wrapper.component';
+export class FadeScrollEffectModule {
+}
+FadeScrollEffectModule.decorators = [
+    { type: NgModule, args: [{
+                declarations: [FadeScrollWrapperComponent, FadeScrollItemComponent],
+                imports: [CommonModule],
+                exports: [FadeScrollWrapperComponent, FadeScrollItemComponent]
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFkZS1zY3JvbGwtZWZmZWN0Lm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2ZhZGUtc2Nyb2xsLWVmZmVjdC8iLCJzb3VyY2VzIjpbImxpYi9mYWRlLXNjcm9sbC1lZmZlY3QubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUV6QyxPQUFPLEVBQUUsdUJBQXVCLEVBQUUsTUFBTSwwREFBMEQsQ0FBQztBQUNuRyxPQUFPLEVBQUUsMEJBQTBCLEVBQUUsTUFBTSxnRUFBZ0UsQ0FBQztBQU81RyxNQUFNLE9BQU8sc0JBQXNCOzs7WUFMbEMsUUFBUSxTQUFDO2dCQUNSLFlBQVksRUFBRSxDQUFDLDBCQUEwQixFQUFFLHVCQUF1QixDQUFDO2dCQUNuRSxPQUFPLEVBQUUsQ0FBQyxZQUFZLENBQUM7Z0JBQ3ZCLE9BQU8sRUFBRSxDQUFDLDBCQUEwQixFQUFFLHVCQUF1QixDQUFDO2FBQy9EIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tbW9uTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uJztcbmltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbmltcG9ydCB7IEZhZGVTY3JvbGxJdGVtQ29tcG9uZW50IH0gZnJvbSAnLi9jb21wb25lbnRzL2ZhZGUtc2Nyb2xsLWl0ZW0vZmFkZS1zY3JvbGwtaXRlbS5jb21wb25lbnQnO1xuaW1wb3J0IHsgRmFkZVNjcm9sbFdyYXBwZXJDb21wb25lbnQgfSBmcm9tICcuL2NvbXBvbmVudHMvZmFkZS1zY3JvbGwtd3JhcHBlci9mYWRlLXNjcm9sbC13cmFwcGVyLmNvbXBvbmVudCc7XG5cbkBOZ01vZHVsZSh7XG4gIGRlY2xhcmF0aW9uczogW0ZhZGVTY3JvbGxXcmFwcGVyQ29tcG9uZW50LCBGYWRlU2Nyb2xsSXRlbUNvbXBvbmVudF0sXG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGVdLFxuICBleHBvcnRzOiBbRmFkZVNjcm9sbFdyYXBwZXJDb21wb25lbnQsIEZhZGVTY3JvbGxJdGVtQ29tcG9uZW50XVxufSlcbmV4cG9ydCBjbGFzcyBGYWRlU2Nyb2xsRWZmZWN0TW9kdWxlIHt9XG4iXX0=

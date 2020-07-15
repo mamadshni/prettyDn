@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/*
+ * Public API Surface of fade-scroll-effect
+ */
+export { FadeScrollEffectService } from './lib/fade-scroll-effect.service';
+export { FadeScrollWrapperComponent } from './lib/components/fade-scroll-wrapper/fade-scroll-wrapper.component';
+export { FadeScrollEffectModule } from './lib/fade-scroll-effect.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2ZhZGUtc2Nyb2xsLWVmZmVjdC8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUlBLHdDQUFjLGtDQUFrQyxDQUFDO0FBQ2pELDJDQUFjLG9FQUFvRSxDQUFDO0FBQ25GLHVDQUFjLGlDQUFpQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBmYWRlLXNjcm9sbC1lZmZlY3RcbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9mYWRlLXNjcm9sbC1lZmZlY3Quc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9jb21wb25lbnRzL2ZhZGUtc2Nyb2xsLXdyYXBwZXIvZmFkZS1zY3JvbGwtd3JhcHBlci5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZmFkZS1zY3JvbGwtZWZmZWN0Lm1vZHVsZSc7XG4iXX0=

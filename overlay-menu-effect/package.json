@@ -1,0 +1,21 @@
+{
+  "name": "overlay-menu-effect",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/overlay-menu-effect.umd.js",
+  "module": "fesm5/overlay-menu-effect.js",
+  "es2015": "fesm2015/overlay-menu-effect.js",
+  "esm5": "esm5/overlay-menu-effect.js",
+  "esm2015": "esm2015/overlay-menu-effect.js",
+  "fesm5": "fesm5/overlay-menu-effect.js",
+  "fesm2015": "fesm2015/overlay-menu-effect.js",
+  "typings": "overlay-menu-effect.d.ts",
+  "metadata": "overlay-menu-effect.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

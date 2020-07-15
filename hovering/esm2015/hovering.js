@@ -1,0 +1,13 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { HoveringService, HoveringCircleComponent, HoveringModule } from './public-api';
+export { HoveringIconDirective as ɵd } from './lib/directives/hovering-icon.directive';
+export { HoveringTextDirective as ɵe } from './lib/directives/hovering-text.directive';
+export { HoveringLineFrom as ɵb, HoveringTextPos as ɵc } from './lib/module/interfaces';
+export { LIB_PREFIX as ɵa } from './lib/module/params';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaG92ZXJpbmcuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9ob3ZlcmluZy8iLCJzb3VyY2VzIjpbImhvdmVyaW5nLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFJQSx5RUFBYyxjQUFjLENBQUM7QUFFN0IsT0FBTyxFQUFDLHFCQUFxQixJQUFJLEVBQUUsRUFBQyxNQUFNLDBDQUEwQyxDQUFDO0FBQ3JGLE9BQU8sRUFBQyxxQkFBcUIsSUFBSSxFQUFFLEVBQUMsTUFBTSwwQ0FBMEMsQ0FBQztBQUNyRixPQUFPLEVBQUMsZ0JBQWdCLElBQUksRUFBRSxFQUFDLGVBQWUsSUFBSSxFQUFFLEVBQUMsTUFBTSx5QkFBeUIsQ0FBQztBQUNyRixPQUFPLEVBQUMsVUFBVSxJQUFJLEVBQUUsRUFBQyxNQUFNLHFCQUFxQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHZW5lcmF0ZWQgYnVuZGxlIGluZGV4LiBEbyBub3QgZWRpdC5cbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL3B1YmxpYy1hcGknO1xuXG5leHBvcnQge0hvdmVyaW5nSWNvbkRpcmVjdGl2ZSBhcyDJtWR9IGZyb20gJy4vbGliL2RpcmVjdGl2ZXMvaG92ZXJpbmctaWNvbi5kaXJlY3RpdmUnO1xuZXhwb3J0IHtIb3ZlcmluZ1RleHREaXJlY3RpdmUgYXMgybVlfSBmcm9tICcuL2xpYi9kaXJlY3RpdmVzL2hvdmVyaW5nLXRleHQuZGlyZWN0aXZlJztcbmV4cG9ydCB7SG92ZXJpbmdMaW5lRnJvbSBhcyDJtWIsSG92ZXJpbmdUZXh0UG9zIGFzIMm1Y30gZnJvbSAnLi9saWIvbW9kdWxlL2ludGVyZmFjZXMnO1xuZXhwb3J0IHtMSUJfUFJFRklYIGFzIMm1YX0gZnJvbSAnLi9saWIvbW9kdWxlL3BhcmFtcyc7Il19

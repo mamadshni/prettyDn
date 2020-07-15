@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { FadeScrollEffectService, FadeScrollWrapperComponent, FadeScrollEffectModule } from './public-api';
+export { FadeScrollItemComponent as ɵa } from './lib/components/fade-scroll-item/fade-scroll-item.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFkZS1zY3JvbGwtZWZmZWN0LmpzIiwic291cmNlUm9vdCI6Im5nOi8vZmFkZS1zY3JvbGwtZWZmZWN0LyIsInNvdXJjZXMiOlsiZmFkZS1zY3JvbGwtZWZmZWN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFJQSw0RkFBYyxjQUFjLENBQUM7QUFFN0IsT0FBTyxFQUFDLHVCQUF1QixJQUFJLEVBQUUsRUFBQyxNQUFNLDhEQUE4RCxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBHZW5lcmF0ZWQgYnVuZGxlIGluZGV4LiBEbyBub3QgZWRpdC5cbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL3B1YmxpYy1hcGknO1xuXG5leHBvcnQge0ZhZGVTY3JvbGxJdGVtQ29tcG9uZW50IGFzIMm1YX0gZnJvbSAnLi9saWIvY29tcG9uZW50cy9mYWRlLXNjcm9sbC1pdGVtL2ZhZGUtc2Nyb2xsLWl0ZW0uY29tcG9uZW50JzsiXX0=
